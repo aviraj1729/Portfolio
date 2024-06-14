@@ -4,24 +4,24 @@ import profilePic from "../assets/profile-pic.png";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
-const links = [
-  {
-    name: "Download CV",
-    path: "/Avi-Raj.pdf",
-  },
-  {
-    name: <FaLinkedin />,
-    path: "https://www.linkedin.com/in/aviraj1729",
-  },
-  {
-    name: <FaGithub />,
-    path: "https://github.com/hawkjack1729",
-  },
-  {
-    name: <FaSquareXTwitter />,
-    path: "https://x.com/hawkjack1729",
-  },
-];
+// const links = [
+//   {
+//     name: "Download CV",
+//     path: "/Avi-Raj.pdf",
+//   },
+//   {
+//     name: <FaLinkedin />,
+//     path: "https://www.linkedin.com/in/aviraj1729",
+//   },
+//   {
+//     name: <FaGithub />,
+//     path: "https://github.com/hawkjack1729",
+//   },
+//   {
+//     name: <FaSquareXTwitter />,
+//     path: "https://x.com/hawkjack1729",
+//   },
+// ];
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -62,23 +62,23 @@ const Description = () => {
             >
               {DESCRIPTION}
             </motion.p>
-            <motion.div
-              variants={container(1)}
-              initial="hidden"
-              animate="visible"
-              className="m-5 mb-8 flex flex-wrap gap-8 items-center lg:text-3xl text-xl justify-center"
-            >
-              {links.map((link, index) => (
-                <a
-                  href={link.path}
-                  key={index}
-                  target="_blank"
-                  className="hover:text-gray-600"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </motion.div>
+            {/* <motion.div */}
+            {/*   variants={container(1)} */}
+            {/*   initial="hidden" */}
+            {/*   animate="visible" */}
+            {/*   className="m-5 mb-8 flex flex-wrap gap-8 items-center lg:text-3xl text-xl justify-center" */}
+            {/* > */}
+            {/*   {links.map((link, index) => ( */}
+            {/*     <a */}
+            {/*       href={link.path} */}
+            {/*       key={index} */}
+            {/*       target="_blank" */}
+            {/*       className="hover:text-gray-600" */}
+            {/*     > */}
+            {/*       {link.name} */}
+            {/*     </a> */}
+            {/*   ))} */}
+            {/* </motion.div> */}
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
