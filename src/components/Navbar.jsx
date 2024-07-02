@@ -6,7 +6,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 const links = [
   {
     name: "Download CV",
-    path: "/Avi-Raj.pdf",
+    path: "/Avi Raj_USAR.pdf",
   },
   {
     name: <FaLinkedin />,
