@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Education = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <div className="border-b border-white-900 dark:border-neutral-900 pb-4 lg:mb-35">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -31,7 +31,7 @@ const Education = () => {
             <h6 className="mb-2 font-semibold text-black dark:text-white">
               {education.institute}, {education.address}
             </h6>
-            <p className="mb-4 text-neutral-400">
+            <p className="mb-4 text-neutral-600 dark:text-neutral-400">
               {education.degree} | {education.cgpa}
             </p>
           </motion.div>

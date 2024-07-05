@@ -3,7 +3,7 @@ import { CONTACT } from "../constants";
 
 const Contact = () => {
   return (
-    <div className="border-b p-2 mb-4 border-neutral-900 pb-20">
+    <div className="border-b p-2 border-white-900 dark:border-neutral-900 pb-20">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -18,7 +18,7 @@ const Contact = () => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
           href={`tel:${CONTACT.phoneNo}`}
-          className="my-4 block text-black dark:text-white"
+          className="my-4 block cursor-pointer text-black dark:text-white"
         >
           {CONTACT.phoneNo}
         </motion.a>
@@ -27,7 +27,7 @@ const Contact = () => {
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5 }}
           href={`mailto:${CONTACT.email}`}
-          className="my-4 mb-4 block border-b border-neutral-900 text-black dark:text-white"
+          className="my-4 block text-black cursor-pointer dark:text-white"
         >
           {CONTACT.email}
         </motion.a>

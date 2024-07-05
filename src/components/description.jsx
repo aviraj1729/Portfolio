@@ -1,27 +1,6 @@
 import { DESCRIPTION } from "../constants";
 import { motion } from "framer-motion";
 import profilePic from "../assets/profile-pic.png";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-
-// const links = [
-//   {
-//     name: "Download CV",
-//     path: "/Avi-Raj.pdf",
-//   },
-//   {
-//     name: <FaLinkedin />,
-//     path: "https://www.linkedin.com/in/aviraj1729",
-//   },
-//   {
-//     name: <FaGithub />,
-//     path: "https://github.com/hawkjack1729",
-//   },
-//   {
-//     name: <FaSquareXTwitter />,
-//     path: "https://x.com/hawkjack1729",
-//   },
-// ];
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -34,7 +13,7 @@ const container = (delay) => ({
 
 const Description = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <div className="border-b border-white-900 dark:border-neutral-900 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col item-center lg:items-start">
@@ -50,7 +29,7 @@ const Description = () => {
               variants={container(0.5)}
               initial="hidden"
               animate="visible"
-              className="bg-gradient-to-r from-pink-300 via-slate-5000 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
+              className="bg-gradient-to-r from-pink-300 via-slate-5000 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent myfont"
             >
               Robotics Software Engineer
             </motion.span>
@@ -62,23 +41,6 @@ const Description = () => {
             >
               {DESCRIPTION}
             </motion.p>
-            {/* <motion.div */}
-            {/*   variants={container(1)} */}
-            {/*   initial="hidden" */}
-            {/*   animate="visible" */}
-            {/*   className="m-5 mb-8 flex flex-wrap gap-8 items-center lg:text-3xl text-xl justify-center" */}
-            {/* > */}
-            {/*   {links.map((link, index) => ( */}
-            {/*     <a */}
-            {/*       href={link.path} */}
-            {/*       key={index} */}
-            {/*       target="_blank" */}
-            {/*       className="hover:text-gray-600" */}
-            {/*     > */}
-            {/*       {link.name} */}
-            {/*     </a> */}
-            {/*   ))} */}
-            {/* </motion.div> */}
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">

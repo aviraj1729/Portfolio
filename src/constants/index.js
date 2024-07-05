@@ -2,10 +2,11 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import certificate1 from "../assets/certificate/Certificate-ICAICR-2023.pdf";
 
-export const DESCRIPTION = `I am a passionate robotics software developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const DESCRIPTION = `I am a passionate robotics software developer with a knack for crafting robust and scalable computer vision modules. With one year of hands-on experience, I have honed my skills in computer vision technologies like OpenCV and YOLOv7, as well as web development technologies including Django, React, Axios, MySQL, PostgreSQL, and MongoDB. I have successfully developed and deployed projects that utilize facial recognition, object detection, and real-time data processing. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences, while continually expanding my knowledge in advanced robotics and automation systems.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated and innovative B.Tech student specializing in Automation and Robotics at the University School of Automation and Robotics, GGSIP University East Delhi Campus, New Delhi. With a strong foundation in computer vision, web development, and facial recognition technologies, I bring a blend of theoretical knowledge and hands-on experience to my projects and internships. As the Core Team Lead of Karuyantra, the Robotics Society at my college, I have successfully led a team of 15 members, demonstrating leadership, teamwork, and project management skills. I am passionate about advancing my expertise in robotics, computer vision, and automation systems, aiming to contribute effectively to cutting-edge technological solutions.`;
 
 export const EDUCATION = [
   {
@@ -27,32 +28,11 @@ export const EDUCATION = [
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "Sept 2023 - Present",
+    role: "Computer Vision Intern",
+    company: "UDIP Technologies PVT. LTD.",
+    description: `As a Computer Vision Intern at UDIP Technologies Pvt. Ltd. in New Delhi, I have played a crucial role in developing and optimizing computer vision algorithms for various applications. My responsibilities have included training YOLOv7 models using datasets of over 10,000 images, achieving a 95% success rate in object detection through deep learning techniques. I have also contributed to improving computer vision models and validating the performance of smart badge systems in real-world trials, attaining a 63% success rate in object detection. Throughout my internship, I have collaborated with a team to enhance the efficiency and effectiveness of vision systems, maintained comprehensive documentation, and demonstrated strong analytical, problem-solving, and communication skills.`,
+    technologies: ["Python", "OpenCV", "YOLOv7", "Django"],
   },
 ];
 
@@ -91,3 +71,15 @@ export const CONTACT = {
   phoneNo: "+91 7050188600 ",
   email: "aviraj1729@gmail.com",
 };
+
+export const CERTIFICATIONS = [
+  {
+    title:
+      "Sixth International Conference on Advance Informatics for Computing Research",
+    company: "ICAICR-2023",
+    year: "Dec 2023",
+    description:
+      "Participated in the Sixth International Conference on Advanced Informatics for Computing Research (ICAICR 2023), where I presented a research paper on the capabilities of smart wearable devices. My research focused on the development and implementation of advanced features such as obstacle and pothole detection, traffic signal recognition to assist elderly people in crossing roads, geofencing, and medical reminders. This work highlights the potential of smart wearables to enhance safety, mobility, and health management, showcasing their multifaceted applications in everyday life.",
+    pdf_certificate: certificate1,
+  },
+];
