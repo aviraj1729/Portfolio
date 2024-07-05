@@ -1,6 +1,6 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
+import project1 from "../assets/projects/project-1.png";
+import project2 from "../assets/projects/project-2.jpeg";
+import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.jpg";
 import certificate1 from "../assets/certificate/Certificate-ICAICR-2023.pdf";
 
@@ -59,18 +59,27 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
   },
   {
-    title: "Blogging Platform",
+    title: "Photo Mingle",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "A web application which allow users to exchange their photos of event.Developing a web app for event creation, invitations, and photo downloads via facial recognition.Implementing email invitations using SendGrid & deploying on AWS for high availability.Designing user-friendly interfaces for seamless event and photo management.Conducting extensive testing to ensure reliability and a smooth user experience.Enabling invitees to search and download event photos efficiently, enhancing user satisfaction.",
+    technologies: [
+      "Node.js",
+      "MongoDB",
+      "React.js",
+      "Express.js",
+      "Axios",
+      "SendGrid",
+    ],
   },
 ];
 
-export const CONTACT = {
-  phoneNo: "+91 7050188600 ",
-  email: "aviraj1729@gmail.com",
-};
+export const CONTACT = [
+  {
+    phoneNo: "+91 7050188600",
+    email: "aviraj1729@gmail.com",
+  },
+];
 
 export const CERTIFICATIONS = [
   {
