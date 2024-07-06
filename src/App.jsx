@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Description from "./components/description";
 import About from "./components/about";
 import Technologies from "./components/technologies";
-// import Certifications from "./components/certificate";
+import Certifications from "./components/certificate";
 import Education from "./components/education";
 import Projects from "./components/project";
 import Experiences from "./components/experience";
@@ -21,7 +21,7 @@ const App = () => {
         <About />
         <Education />
         <Experiences />
-        {/* <Certifications /> */}
+        <Certifications />
         <Technologies />
         <Projects />
         <Contact />

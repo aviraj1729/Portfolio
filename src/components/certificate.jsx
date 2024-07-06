@@ -1,8 +1,24 @@
+import React, { useState, useEffect } from "react";
 import { CERTIFICATIONS } from "../constants";
 import { motion } from "framer-motion";
-import PdfViewer from "./PdfViewer";
+import ViewPdf from "./ViewPdf";
 
 export default function Certifications() {
+  const [parentWidth, setParentWidth] = useState(0);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      const element = document.getElementById("certificates-container");
+      if (element) {
+        setParentWidth(element.clientWidth);
+      }
+    };
+
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   return (
     <div className="border-b border-white-900 dark:border-neutral-900 pb-4 lg:mb-35">
       <motion.h1
@@ -17,13 +33,16 @@ export default function Certifications() {
         {CERTIFICATIONS.map((certificate, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
             <motion.div
+              id="certificates-container"
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
               className="w-full lg:w-1/4 px-5"
             >
-              <PdfViewer fileUrl={certificate.pdf_certificate} />{" "}
-              {/* Ensure this prop matches your PdfViewer component */}
+              <ViewPdf
+                pdfFile={certificate.pdf_certificate}
+                parentWidth={parentWidth}
+              />
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
