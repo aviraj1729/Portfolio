@@ -1,7 +1,7 @@
 import project1 from "../assets/projects/project-1.png";
-import project2 from "../assets/projects/project-2.jpeg";
+import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
-import project4 from "../assets/projects/project-4.jpg";
+import project4 from "../assets/projects/project-4.png";
 import certificate1 from "../assets/certificate/Certificate-ICAICR-2023.pdf";
 
 export const DESCRIPTION = `I am a passionate robotics software developer with a knack for crafting robust and scalable computer vision modules. With one year of hands-on experience, I have honed my skills in computer vision technologies like OpenCV and YOLOv7, as well as web development technologies including Django, React, Axios, MySQL, PostgreSQL, and MongoDB. I have successfully developed and deployed projects that utilize facial recognition, object detection, and real-time data processing. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences, while continually expanding my knowledge in advanced robotics and automation systems.`;
@@ -74,12 +74,10 @@ export const PROJECTS = [
   },
 ];
 
-export const CONTACT = [
-  {
-    phoneNo: "+91 7050188600",
-    email: "aviraj1729@gmail.com",
-  },
-];
+export const CONTACT = {
+  phoneNo: "+91 7050188600",
+  email: "aviraj1729@gmail.com",
+};
 
 export const CERTIFICATIONS = [
   {
