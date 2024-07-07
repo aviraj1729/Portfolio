@@ -1,14 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { pdfjs, Document, Page } from "react-pdf";
 import { MdClose, MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import PropTypes from "prop-types";
 
-export default function ViewPdf({ pdfFile, parentWidth }) {
+export default function ViewPdf({ pdfFile, parentDimensions }) {
   const [totalPages, setTotalPages] = useState(0);
   const [pageDimensions, setPageDimensions] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [numPages, setNumPages] = useState();
   const [currentPage, setCurrentPage] = useState(1);
+  const [scaleFactor, setScaleFactor] = useState(1);
+  const parentRef = useRef();
+  const popupRef = useRef();
 
   useEffect(() => {
     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.mjs`;
@@ -25,6 +28,11 @@ export default function ViewPdf({ pdfFile, parentWidth }) {
           ),
         );
         setPageDimensions(dimensions);
+        const scale = Math.min(
+          parentDimensions.SectionWidth / dimensions[0].width,
+          parentDimensions.SectionHeight / dimensions[0].height,
+        );
+        setScaleFactor(scale);
         setTotalPages(pdf.numPages);
       } catch (error) {
         console.error(
@@ -34,27 +42,49 @@ export default function ViewPdf({ pdfFile, parentWidth }) {
       }
     };
     fetchPdfAndCalculateDimensions();
-  }, [pdfFile]);
+  }, [pdfFile, parentDimensions]);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
 
-  const handleShowPopup = () => {
+  const handleShowPopup = useCallback(() => {
     if (!showPopup) {
-      document.body.style.overflow = "hidden"; // Disable main page scroll
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", handleKeyDown);
     } else {
-      document.body.style.overflow = "auto"; // Enable main page scroll
+      document.body.style.overflow = "auto";
+      document.removeEventListener("keydown", handleKeyDown);
     }
     setShowPopup(!showPopup);
+  }, [showPopup]);
+
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (event.key === "Escape") {
+        handleShowPopup();
+      }
+    },
+    [handleShowPopup],
+  );
+
+  const handleOutsideClick = (event) => {
+    if (popupRef.current && !popupRef.current.contains(event.target)) {
+      handleShowPopup();
+    }
   };
 
   useEffect(() => {
-    // Cleanup function to ensure the main page scroll is enabled when the component unmounts
+    if (showPopup) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    }
+
     return () => {
-      document.body.style.overflow = "auto";
+      document.removeEventListener("mousedown", handleOutsideClick);
     };
-  }, []);
+  }, [showPopup]);
 
   const handlePageChange = (offset) => {
     setCurrentPage((prevPage) =>
@@ -63,15 +93,15 @@ export default function ViewPdf({ pdfFile, parentWidth }) {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center" ref={parentRef}>
       <div
-        className="flex items-center justify-center cursor-pointer text-black dark:text-white"
+        className="flex items-center justify-center cursor-pointer text-black dark:text-white rounded-lg"
         onClick={handleShowPopup}
       >
         <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
           <Page
             pageNumber={1}
-            width={parentWidth / 1.1}
+            width={parentDimensions.ContainerWidth / 1.2}
             renderTextLayer={false}
             renderAnnotationLayer={false}
           />
@@ -79,7 +109,10 @@ export default function ViewPdf({ pdfFile, parentWidth }) {
       </div>
       {showPopup && (
         <div className="fixed inset-0 h-50 z-10 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="relative bg-white p-8 rounded-lg overflow-auto max-h-full">
+          <div
+            ref={popupRef}
+            className="relative bg-white p-8 rounded-lg overflow-auto max-h-full"
+          >
             <button
               onClick={handleShowPopup}
               className="absolute top-2 z-50 right-2 p-1 bg-black rounded-full"
@@ -109,6 +142,7 @@ export default function ViewPdf({ pdfFile, parentWidth }) {
               <Page
                 key={`page_${currentPage}`}
                 pageNumber={currentPage}
+                scale={scaleFactor}
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
                 canvasBackground="white"
@@ -123,5 +157,9 @@ export default function ViewPdf({ pdfFile, parentWidth }) {
 
 ViewPdf.propTypes = {
   pdfFile: PropTypes.string.isRequired,
-  parentWidth: PropTypes.number.isRequired,
+  parentDimensions: PropTypes.shape({
+    SectionWidth: PropTypes.number.isRequired,
+    SectionHeight: PropTypes.number.isRequired,
+    ContainerWidth: PropTypes.number.isRequired,
+  }).isRequired,
 };

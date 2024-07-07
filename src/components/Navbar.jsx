@@ -94,8 +94,8 @@ export default function Navbar() {
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "flex flex-wrap rounded-md items-center px-3 py-2 text-base font-medium",
+                      : "dark:text-gray-300 text-black hover:text-white",
+                    "flex flex-wrap items-center text-center whitespace-nowrap px-3 py-2 text-base font-medium",
                   )}
                   aria-current={item.current ? "page" : undefined}
                 >

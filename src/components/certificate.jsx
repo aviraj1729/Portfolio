@@ -4,23 +4,35 @@ import { motion } from "framer-motion";
 import ViewPdf from "./ViewPdf";
 
 export default function Certifications() {
-  const [parentWidth, setParentWidth] = useState(0);
+  const [parentDimensions, setParentDimensions] = useState({
+    width: 0,
+    height: 0,
+  });
 
   useEffect(() => {
-    const updateWidth = () => {
-      const element = document.getElementById("certificates-container");
-      if (element) {
-        setParentWidth(element.clientWidth);
+    const updateDimensions = () => {
+      const element1 = document.getElementById("certificates-container");
+      const element2 = document.getElementById("certificates-section");
+      if (element1 && element2) {
+        setParentDimensions({
+          ContainerWidth: element1.clientWidth,
+          ContainerHeight: element1.clientHeight,
+          SectionWidth: element2.clientWidth,
+          SectionHeight: element2.clientHeight,
+        });
       }
     };
 
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
   return (
-    <div className="border-b border-white-900 dark:border-neutral-900 pb-4 lg:mb-35">
+    <div
+      className="border-b border-white-900 dark:border-neutral-900 pb-4 lg:mb-35"
+      id="certificates-section"
+    >
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -37,11 +49,11 @@ export default function Certifications() {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="w-full lg:w-1/4 px-5"
+              className="w-full lg:w-1/4 px-5 flex justify-start ml-2"
             >
               <ViewPdf
                 pdfFile={certificate.pdf_certificate}
-                parentWidth={parentWidth}
+                parentDimensions={parentDimensions}
               />
             </motion.div>
             <motion.div
