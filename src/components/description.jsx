@@ -49,7 +49,7 @@ const Description = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className="rounded-2xl"
+              className="rounded-2xl h-[450px] w-auto"
               src={profilePic}
               alt="profile"
             />
