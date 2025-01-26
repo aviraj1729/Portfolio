@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
+import project5 from "../assets/projects/project-5.png";
 import certificate1 from "../assets/certificate/Certificate-ICAICR-2023.pdf";
 import certificate2 from "../assets/certificate/certificate_micro1.pdf";
 
@@ -71,6 +72,19 @@ export const PROJECTS = [
       "Express.js",
       "Axios",
       "SendGrid",
+    ],
+  },
+  {
+    title: "Todo API",
+    image: project5,
+    description:
+      "A feature-rich Todo Application built with FastAPI and SQLAlchemy, providing secure user authentication and token-based authorization. Users can create, update, and manage their tasks efficiently, with features like password reset and JWT-secured endpoints. The backend is robustly designed with database management and scalability in mind.",
+    technologies: [
+      "FastAPI",
+      "mysql",
+      "Python",
+      "JWT (JSON Web Tokens)",
+      "SQLAlchemy",
     ],
   },
 ];

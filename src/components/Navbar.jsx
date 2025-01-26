@@ -11,7 +11,7 @@ const navigation = [
   {
     name: "Download CV",
     icon: <FaDownload />,
-    path: "/Resume_Avi-Raj.pdf",
+    path: "/Resume.pdf",
   },
   {
     name: "Linkedin",
