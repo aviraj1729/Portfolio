@@ -12,10 +12,10 @@ export const ABOUT_TEXT = `I am a dedicated and innovative B.Tech student specia
 
 export const EDUCATION = [
   {
-    year: "2021 - Present",
+    year: "2021 - 2025",
     institute:
       "University School of Automation and Robotics, GGSIP University East Delhi Campus",
-    cgpa: "8.56/10(till 5th sem)",
+    cgpa: "8.11/10",
     address: "Surajmal Vihar,New Delhi",
     degree: "B.Tech in Automation and Robotics.",
   },
@@ -45,6 +45,8 @@ export const PROJECTS = [
     description:
       "A fully functional website where college students can get real-time access to class schedules,attendance records, exam marks, study material, Notices, and diffirent forms required during college.",
     technologies: ["HTML", "CSS", "Tailwind CSS", "React", "Django", "MongoDB"],
+    github_link: "",
+    working_link: "",
   },
   {
     title: "Facial Recognition System",
@@ -52,6 +54,8 @@ export const PROJECTS = [
     description:
       "The Facial Recognition System successfully recognized and localized faces in real-time images and videos, showcasing a high level of accuracy and responsiveness.The project's successful completion boosted my confidence in tackling complex computer vision chalenges and reinforced my passion for pursuing a career in the field of software engineering and artificial intelligence.",
     technologies: ["Python", "HTML", "Django", "CSS", "React", "Tailwind CSS"],
+    github_link: "",
+    working_link: "",
   },
   {
     title: "Portfolio Website",
@@ -59,6 +63,8 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Bootstrap"],
+    github_link: "",
+    working_link: "",
   },
   {
     title: "Photo Mingle",
@@ -73,6 +79,8 @@ export const PROJECTS = [
       "Axios",
       "SendGrid",
     ],
+    github_link: "",
+    working_link: "",
   },
   {
     title: "Todo API",
@@ -86,6 +94,23 @@ export const PROJECTS = [
       "JWT (JSON Web Tokens)",
       "SQLAlchemy",
     ],
+    github_link: "",
+    working_link: "",
+  },
+  {
+    title: "QRVars",
+    image: project5,
+    description:
+      "A feature-rich Todo Application built with FastAPI and SQLAlchemy, providing secure user authentication and token-based authorization. Users can create, update, and manage their tasks efficiently, with features like password reset and JWT-secured endpoints. The backend is robustly designed with database management and scalability in mind.",
+    technologies: [
+      "FastAPI",
+      "mysql",
+      "Python",
+      "JWT (JSON Web Tokens)",
+      "SQLAlchemy",
+    ],
+    github_link: "",
+    working_link: "",
   },
 ];
 
