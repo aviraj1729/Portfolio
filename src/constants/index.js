@@ -3,6 +3,7 @@ import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
 import project5 from "../assets/projects/project-5.png";
+import project6 from "../assets/projects/project-6.png";
 import certificate1 from "../assets/certificate/Certificate-ICAICR-2023.pdf";
 import certificate2 from "../assets/certificate/certificate_micro1.pdf";
 
@@ -99,9 +100,9 @@ export const PROJECTS = [
   },
   {
     title: "QRVars",
-    image: project5,
+    image: project6,
     description:
-      "A feature-rich Todo Application built with FastAPI and SQLAlchemy, providing secure user authentication and token-based authorization. Users can create, update, and manage their tasks efficiently, with features like password reset and JWT-secured endpoints. The backend is robustly designed with database management and scalability in mind.",
+      "A smart, QR-based email automation tool I built to streamline personalized communication. It allows users to generate QR codes linked to dynamic email templates containing variables in the subject and body. When someone scans the QR code, they're prompted to fill out a form, and their responses are used to replace the placeholders. The user is then redirected to their email app with a prefilled, ready-to-send message. The system includes a real-time dashboard to monitor scans and submissions, built using Socket.io. The full-stack architecture is powered by React, Node.js/Express, Supabase for authentication and database, and Upstash Redis for fast, session-aware processing. Email delivery is securely handled via SMTP integration through Render.",
     technologies: [
       "FastAPI",
       "mysql",
