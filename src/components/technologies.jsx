@@ -1,32 +1,57 @@
 import { AiOutlinePython } from "react-icons/ai";
 import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandDjango } from "react-icons/tb";
-import { FaGithub } from "react-icons/fa";
-import { SiOpencv, SiTailwindcss, SiNeovim, SiMongodb } from "react-icons/si";
+import {
+  TbBrandDjango,
+  TbBrandSupabase,
+  TbBrandNodejs,
+  TbBrandSocketIo,
+  TbBrandCpp,
+} from "react-icons/tb";
+import { FaGithub, FaJava } from "react-icons/fa";
+import {
+  SiOpencv,
+  SiTailwindcss,
+  SiVim,
+  SiMongodb,
+  SiPostman,
+  SiFastapi,
+} from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
+import { DiRedis } from "react-icons/di";
 import { motion } from "framer-motion";
 
-const techIcon = (Icon, duration, color) => (
-  <motion.div
-    variants={{
-      initial: { y: -10 },
-      animate: {
-        y: [10, -10],
-        transition: {
-          duration: duration,
-          ease: "linear",
-          repeat: Infinity,
-          repeatType: "reverse",
+const techIcon = (Icon, duration, color, label, tooltipPosition = "top") => {
+  const isTop = tooltipPosition === "top";
+
+  return (
+    <motion.div
+      variants={{
+        initial: { y: -10 },
+        animate: {
+          y: [10, -10],
+          transition: {
+            duration: duration,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "reverse",
+          },
         },
-      },
-    }}
-    initial="initial"
-    animate="animate"
-    className="rounded-2xl border-4 border-neutral-800 p-4 text-black dark:text-white"
-  >
-    <Icon className={`text-7xl ${color}`} />
-  </motion.div>
-);
+      }}
+      initial="initial"
+      animate="animate"
+      className="group relative rounded-2xl border-4 border-neutral-800 p-4 text-black dark:text-white"
+    >
+      <Icon className={`text-7xl ${color}`} />
+      <span
+        className={`absolute ${
+          isTop ? "bottom-full mb-2" : "top-full mt-2"
+        } left-1/2 -translate-x-1/2 scale-0 rounded bg-neutral-900 px-2 py-1 text-xs text-white opacity-0 transition-all group-hover:scale-100 group-hover:opacity-100 dark:bg-white dark:text-black`}
+      >
+        {label}
+      </span>
+    </motion.div>
+  );
+};
 
 const Technologies = () => {
   return (
@@ -45,15 +70,25 @@ const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="flex flex-wrap items-center justify-center gap-4"
       >
-        {techIcon(AiOutlinePython, 2, "")}
-        {techIcon(TbBrandDjango, 3.5, "text-green-400")}
-        {techIcon(SiOpencv, 3, "text-red-700")}
-        {techIcon(RiReactjsLine, 5.5, "text-cyan-400")}
-        {techIcon(FaGithub, 4, "text-white-700")}
-        {techIcon(SiMongodb, 6, "text-green-500")}
-        {techIcon(SiNeovim, 3, "text-indigo-500")}
-        {techIcon(SiTailwindcss, 6, "text-blue-500")}
-        {techIcon(GrMysql, 3.5, "text-white-500")}
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          {techIcon(AiOutlinePython, 2, "", "Python", "top")}
+          {techIcon(FaJava, 3, "", "Java", "top")}
+          {techIcon(TbBrandCpp, 2.5, "", "C++", "top")}
+          {techIcon(TbBrandDjango, 3.5, "text-green-600", "Django", "top")}
+          {techIcon(SiOpencv, 3, "text-red-700", "OpenCV", "top")}
+          {techIcon(RiReactjsLine, 5.5, "text-cyan-400", "React", "top")}
+          {techIcon(TbBrandNodejs, 2, "text-green-500", "Node.js", "top")}
+          {techIcon(FaGithub, 4, "text-white-700", "GitHub", "top")}
+          {techIcon(SiMongodb, 6, "text-green-500", "MongoDB", "top")}
+          {techIcon(SiVim, 3, "text-indigo-500", "Vim", "top")}
+          {techIcon(SiTailwindcss, 6, "text-blue-500", "TailwindCSS", "top")}
+          {techIcon(GrMysql, 3.5, "text-white-500", "MySQL", "bottom")}
+          {techIcon(TbBrandSupabase, 2, "text-green-500", "Supabase", "bottom")}
+          {techIcon(SiFastapi, 2, "text-teal-600", "FastAPI", "bottom")}
+          {techIcon(SiPostman, 2, "text-orange-500", "Postman", "bottom")}
+          {techIcon(DiRedis, 4, "text-red-500", "Redis", "bottom")}
+          {techIcon(TbBrandSocketIo, 4, "", "Socket.IO", "bottom")}
+        </div>
       </motion.div>
     </div>
   );

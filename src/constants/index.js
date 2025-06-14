@@ -3,7 +3,11 @@ import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
 import project5 from "../assets/projects/project-5.png";
-import project6 from "../assets/projects/project-6.png";
+import project6_1 from "../assets/projects/project-6_1.png";
+import project6_2 from "../assets/projects/project-6_2.png";
+import project6_3 from "../assets/projects/project-6_3.png";
+import project6_4 from "../assets/projects/project-6_4.png";
+import project6_5 from "../assets/projects/project-6_5.png";
 import certificate1 from "../assets/certificate/Certificate-ICAICR-2023.pdf";
 import certificate2 from "../assets/certificate/certificate_micro1.pdf";
 
@@ -42,34 +46,34 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "CollegeBurster Website",
-    image: project1,
+    images: [project1],
     description:
       "A fully functional website where college students can get real-time access to class schedules,attendance records, exam marks, study material, Notices, and diffirent forms required during college.",
     technologies: ["HTML", "CSS", "Tailwind CSS", "React", "Django", "MongoDB"],
     github_link: "",
-    working_link: "",
+    demo: "",
   },
   {
     title: "Facial Recognition System",
-    image: project2,
+    images: [project2],
     description:
       "The Facial Recognition System successfully recognized and localized faces in real-time images and videos, showcasing a high level of accuracy and responsiveness.The project's successful completion boosted my confidence in tackling complex computer vision chalenges and reinforced my passion for pursuing a career in the field of software engineering and artificial intelligence.",
     technologies: ["Python", "HTML", "Django", "CSS", "React", "Tailwind CSS"],
     github_link: "",
-    working_link: "",
+    demo: "",
   },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-    github_link: "",
-    working_link: "",
-  },
+  // {
+  //   title: "Portfolio Website",
+  //   images: [project3],
+  //   description:
+  //     "A personal portfolio website showcasing projects, skills, and contact information.",
+  //   technologies: ["HTML", "CSS", "React", "Bootstrap"],
+  //   github_link: "",
+  //   demo: "",
+  // },
   {
     title: "Photo Mingle",
-    image: project4,
+    images: [project4],
     description:
       "A web application which allow users to exchange their photos of event.Developing a web app for event creation, invitations, and photo downloads via facial recognition.Implementing email invitations using SendGrid & deploying on AWS for high availability.Designing user-friendly interfaces for seamless event and photo management.Conducting extensive testing to ensure reliability and a smooth user experience.Enabling invitees to search and download event photos efficiently, enhancing user satisfaction.",
     technologies: [
@@ -81,11 +85,11 @@ export const PROJECTS = [
       "SendGrid",
     ],
     github_link: "",
-    working_link: "",
+    demo: "",
   },
   {
     title: "Todo API",
-    image: project5,
+    images: [project5],
     description:
       "A feature-rich Todo Application built with FastAPI and SQLAlchemy, providing secure user authentication and token-based authorization. Users can create, update, and manage their tasks efficiently, with features like password reset and JWT-secured endpoints. The backend is robustly designed with database management and scalability in mind.",
     technologies: [
@@ -96,11 +100,11 @@ export const PROJECTS = [
       "SQLAlchemy",
     ],
     github_link: "",
-    working_link: "",
+    demo: "",
   },
   {
     title: "QRVars",
-    image: project6,
+    images: [project6_1, project6_2, project6_3, project6_4, project6_5],
     description:
       "A smart, QR-based email automation tool I built to streamline personalized communication. It allows users to generate QR codes linked to dynamic email templates containing variables in the subject and body. When someone scans the QR code, they're prompted to fill out a form, and their responses are used to replace the placeholders. The user is then redirected to their email app with a prefilled, ready-to-send message. The system includes a real-time dashboard to monitor scans and submissions, built using Socket.io. The full-stack architecture is powered by React, Node.js/Express, Supabase for authentication and database, and Upstash Redis for fast, session-aware processing. Email delivery is securely handled via SMTP integration through Render.",
     technologies: [
@@ -113,8 +117,8 @@ export const PROJECTS = [
       "Render",
       "Upstash",
     ],
-    github_link: "",
-    working_link: "",
+    github_link: "https://github.com/Hawkjack1729/QRVARS",
+    demo: "https://qrvars.hawkjack.xyz",
   },
 ];
 
