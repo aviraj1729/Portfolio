@@ -12,6 +12,7 @@ const navigation = [
     name: "Download CV",
     icon: <FaDownload />,
     path: "/Resume_Avi Raj.pdf",
+    download: true,
   },
   {
     name: "Linkedin",
@@ -65,7 +66,8 @@ export default function Navbar() {
                   <a
                     key={item.name}
                     href={item.path}
-                    target="_blank"
+                    target={item.download ? "_self" : "_blank"}
+                    download={item.download ? true : undefined}
                     className={classNames(
                       item.current
                         ? "bg-gray-900 text-white"
@@ -91,6 +93,8 @@ export default function Navbar() {
                   key={item.name}
                   as="a"
                   href={item.path}
+                  target={item.download ? "_self" : "_blank"}
+                  download={item.download ? true : undefined}
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
