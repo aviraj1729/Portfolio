@@ -22,12 +22,12 @@ const navigation = [
   {
     name: "Github",
     icon: <FaGithub />,
-    path: "https://github.com/hawkjack1729",
+    path: "https://github.com/aviraj1729",
   },
   {
     name: "Twitter",
     icon: <FaSquareXTwitter />,
-    path: "https://x.com/hawkjack1729",
+    path: "https://x.com/aviraj1729",
   },
 ];
 
