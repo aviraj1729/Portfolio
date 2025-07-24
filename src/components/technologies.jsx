@@ -71,9 +71,9 @@ const Technologies = () => {
         className="flex flex-wrap items-center justify-center gap-4"
       >
         <div className="flex flex-wrap items-center justify-center gap-4">
-          {techIcon(AiOutlinePython, 2, "", "Python", "top")}
-          {techIcon(FaJava, 3, "", "Java", "top")}
-          {techIcon(TbBrandCpp, 2.5, "", "C++", "top")}
+          {techIcon(AiOutlinePython, 2, "text-green-500", "Python", "top")}
+          {techIcon(FaJava, 3, "text-red-500", "Java", "top")}
+          {techIcon(TbBrandCpp, 2.5, "text-blue-700", "C++", "top")}
           {techIcon(TbBrandDjango, 3.5, "text-green-600", "Django", "top")}
           {techIcon(SiOpencv, 3, "text-red-700", "OpenCV", "top")}
           {techIcon(RiReactjsLine, 5.5, "text-cyan-400", "React", "top")}
