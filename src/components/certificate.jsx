@@ -62,11 +62,11 @@ export default function Certifications() {
               transition={{ duration: 0.5 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between">
                 <h6 className="mb-2 font-semibold text-black dark:text-white">
                   {certificate.title} - {certificate.company}
                 </h6>
-                <p className="mb-2 text-sm text-neutral-500 whitespace-nowrap">
+                <p className="m-2 text-sm text-neutral-500 whitespace-nowrap">
                   {certificate.year}
                 </p>
               </div>

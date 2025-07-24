@@ -12,7 +12,6 @@ const navigation = [
     name: "Download CV",
     icon: <FaDownload />,
     path: "https://files.devaviraj.me/Resume_Avi_Raj.pdf",
-    download: true,
   },
   {
     name: "Linkedin",
@@ -66,15 +65,12 @@ export default function Navbar() {
                   <a
                     key={item.name}
                     href={item.path}
-                    target={item.download ? "_self" : "_blank"}
-                    download={item.download ? true : undefined}
+                    target="_blank"
+                    download={item.download ? "" : undefined}
                     className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "dark:text-gray-300 text-black hover:bg-gray-700 hover:text-white",
                       "group relative rounded-md px-3 py-2 text-sm text-center whitespace-nowrap font-medium inline-flex items-center",
+                      "hover:bg-gray-700 hover:text-white dark:text-gray-300 text-black",
                     )}
-                    aria-current={item.current ? "page" : undefined}
                   >
                     <span className="px-2 py-1 text-lg">{item.icon}</span>
                     <span className="absolute lg:hidden hover:flex lg:group-hover:flex bg-gray-800 text-white text-sm rounded-md px-2 py-1 -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
@@ -94,14 +90,11 @@ export default function Navbar() {
                   as="a"
                   href={item.path}
                   target={item.download ? "_self" : "_blank"}
-                  download={item.download ? true : undefined}
+                  download={item.download ? "" : undefined}
                   className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "dark:text-gray-300 text-black hover:text-white",
                     "flex flex-wrap items-center text-center whitespace-nowrap px-3 py-2 text-base font-medium",
+                    "hover:text-white dark:text-gray-300 text-black",
                   )}
-                  aria-current={item.current ? "page" : undefined}
                 >
                   <span className="px-2 py-1 text-lg">{item.icon}</span>
                   {item.name}

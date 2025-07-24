@@ -1,4 +1,3 @@
-// const project1 from "https://files.devaviraj.me/projects/project-1.png";
 const project1 = "https://files.devaviraj.me/projects/project-1.png";
 const project2 = "https://files.devaviraj.me/projects/project-2.png";
 const project3 = "https://files.devaviraj.me/projects/project-3.png";
@@ -9,10 +8,15 @@ const project6_2 = "https://files.devaviraj.me/projects/project-6_2.png";
 const project6_3 = "https://files.devaviraj.me/projects/project-6_3.png";
 const project6_4 = "https://files.devaviraj.me/projects/project-6_4.png";
 const project6_5 = "https://files.devaviraj.me/projects/project-6_5.png";
+const project7_1 = "https://files.devaviraj.me/projects/project-7_1.png";
+const project7_2 = "https://files.devaviraj.me/projects/project-7_2.png";
+const project7_3 = "https://files.devaviraj.me/projects/project-7_3.png";
 const certificate1 =
   "https://files.devaviraj.me/certificate/Certificate-ICAICR-2023.pdf";
 const certificate2 =
   "https://files.devaviraj.me/certificate/certificate_micro1.pdf";
+
+const github = "https://github.com/aviraj1729";
 
 export const DESCRIPTION = `I am a passionate robotics software developer with a knack for crafting robust and scalable computer vision modules. With one year of hands-on experience, I have honed my skills in computer vision technologies like OpenCV and YOLOv7, as well as web development technologies including Django, React, Axios, MySQL, PostgreSQL, and MongoDB. I have successfully developed and deployed projects that utilize facial recognition, object detection, and real-time data processing. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences, while continually expanding my knowledge in advanced robotics and automation systems.`;
 
@@ -23,8 +27,8 @@ export const EDUCATION = [
     year: "2021 - 2025",
     institute:
       "University School of Automation and Robotics, GGSIP University East Delhi Campus",
-    cgpa: "8.11/10",
-    address: "Surajmal Vihar,New Delhi",
+    cgpa: "8.1/10",
+    address: "Surajmal Vihar, New Delhi",
     degree: "B.Tech in Automation and Robotics.",
   },
   {
@@ -48,65 +52,30 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "CollegeBurster Website",
-    images: [project1],
+    title: "QueeTalk",
+    timeline: "May - July 2025",
+    images: [project7_1, project7_2, project7_3],
     description:
-      "A fully functional website where college students can get real-time access to class schedules,attendance records, exam marks, study material, Notices, and diffirent forms required during college.",
-    technologies: ["HTML", "CSS", "Tailwind CSS", "React", "Django", "MongoDB"],
-    github_link: "",
-    demo: "",
-  },
-  {
-    title: "Facial Recognition System",
-    images: [project2],
-    description:
-      "The Facial Recognition System successfully recognized and localized faces in real-time images and videos, showcasing a high level of accuracy and responsiveness.The project's successful completion boosted my confidence in tackling complex computer vision chalenges and reinforced my passion for pursuing a career in the field of software engineering and artificial intelligence.",
-    technologies: ["Python", "HTML", "Django", "CSS", "React", "Tailwind CSS"],
-    github_link: "",
-    demo: "",
-  },
-  // {
-  //   title: "Portfolio Website",
-  //   images: [project3],
-  //   description:
-  //     "A personal portfolio website showcasing projects, skills, and contact information.",
-  //   technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  //   github_link: "",
-  //   demo: "",
-  // },
-  {
-    title: "Photo Mingle",
-    images: [project4],
-    description:
-      "A web application which allow users to exchange their photos of event.Developing a web app for event creation, invitations, and photo downloads via facial recognition.Implementing email invitations using SendGrid & deploying on AWS for high availability.Designing user-friendly interfaces for seamless event and photo management.Conducting extensive testing to ensure reliability and a smooth user experience.Enabling invitees to search and download event photos efficiently, enhancing user satisfaction.",
+      "Chatty is a full-featured real-time chat application supporting both personal and group conversations. It was developed with a focus on speed, security, and seamless user experience, catering to over 200 users. The platform features two-factor authentication (TOTP), secure JWT-based sessions, and efficient Redis caching for socket connections. The user experience was enhanced by adding typing indicators, file sharing, emoji picker, and emoji reactions, improving engagement by 35%. Chatty achieved a message latency of under 200ms through Redis caching and file upload rate-limiting. It follows a clean Model-View architecture using Node.js and Socket.IO for real-time communication, with MongoDB as the primary data store. All media attachments are uploaded to and served from a Cloudflare R2 Bucket, ensuring fast and secure access.",
+
     technologies: [
-      "Node.js",
-      "MongoDB",
       "React.js",
-      "Express.js",
-      "Axios",
-      "SendGrid",
+      "Node.js",
+      "Socket.IO",
+      "MongoDB",
+      "Redis",
+      "JWT",
+      "TOTP",
+      "TailwindCSS",
+      "AWS-SDK",
+      "CLoudflare R2 Bucket",
     ],
-    github_link: "",
-    demo: "",
-  },
-  {
-    title: "Todo API",
-    images: [project5],
-    description:
-      "A feature-rich Todo Application built with FastAPI and SQLAlchemy, providing secure user authentication and token-based authorization. Users can create, update, and manage their tasks efficiently, with features like password reset and JWT-secured endpoints. The backend is robustly designed with database management and scalability in mind.",
-    technologies: [
-      "FastAPI",
-      "mysql",
-      "Python",
-      "JWT (JSON Web Tokens)",
-      "SQLAlchemy",
-    ],
-    github_link: "",
+    github_link: `${github}/chatty`,
     demo: "",
   },
   {
     title: "QRVars",
+    timeline: "June 2025",
     images: [project6_1, project6_2, project6_3, project6_4, project6_5],
     description:
       "A smart, QR-based email automation tool I built to streamline personalized communication. It allows users to generate QR codes linked to dynamic email templates containing variables in the subject and body. When someone scans the QR code, they're prompted to fill out a form, and their responses are used to replace the placeholders. The user is then redirected to their email app with a prefilled, ready-to-send message. The system includes a real-time dashboard to monitor scans and submissions, built using Socket.io. The full-stack architecture is powered by React, Node.js/Express, Supabase for authentication and database, and Upstash Redis for fast, session-aware processing. Email delivery is securely handled via SMTP integration through Render.",
@@ -120,8 +89,61 @@ export const PROJECTS = [
       "Render",
       "Upstash",
     ],
-    github_link: "https://github.com/Hawkjack1729/QRVARS",
+    github_link: `${github}/qrvars`,
     demo: "https://qrvars.hawkjack.xyz",
+  },
+  {
+    title: "Photo Mingle",
+    timeline: "Jan. - Feb. 2025",
+    images: [project4],
+    description:
+      "A web application which allows users to exchange their photos of an event. Developing a web app for event creation, invitations, and photo downloads via facial recognition. Implementing email invitations using SendGrid & deploying on AWS for high availability. Designing user-friendly interfaces for seamless event and photo management. Conducting extensive testing to ensure reliability and a smooth user experience. Enabling invitees to search and download event photos efficiently, enhancing user satisfaction.",
+    technologies: [
+      "Node.js",
+      "MongoDB",
+      "React.js",
+      "Express.js",
+      "Axios",
+      "SendGrid",
+    ],
+    github_link: "",
+    demo: "",
+  },
+  {
+    title: "Todo API",
+    timeline: "Jan. 2025",
+    images: [project5],
+    description:
+      "A feature-rich Todo Application built with FastAPI and SQLAlchemy, providing secure user authentication and token-based authorization. Users can create, update, and manage their tasks efficiently, with features like password reset and JWT-secured endpoints. The backend is robustly designed with database management and scalability in mind.",
+    technologies: [
+      "FastAPI",
+      "MySQL",
+      "Python",
+      "JWT (JSON Web Tokens)",
+      "SQLAlchemy",
+    ],
+    github_link: `${github}/todo`,
+    demo: "",
+  },
+  {
+    title: "CollegeBurster Website",
+    timeline: "Dec. 2024 - Jan. 2025",
+    images: [project1],
+    description:
+      "A fully functional website where college students can get real-time access to class schedules, attendance records, exam marks, study material, notices, and different forms required during college.",
+    technologies: ["HTML", "CSS", "Tailwind CSS", "React", "Django", "MongoDB"],
+    github_link: "",
+    demo: "",
+  },
+  {
+    title: "Facial Recognition System",
+    timeline: "July - Sept. 2024",
+    images: [project2],
+    description:
+      "The Facial Recognition System successfully recognized and localized faces in real-time images and videos, showcasing a high level of accuracy and responsiveness. The project's successful completion boosted my confidence in tackling complex computer vision challenges and reinforced my passion for pursuing a career in the field of software engineering and artificial intelligence.",
+    technologies: ["Python", "HTML", "Django", "CSS", "React", "Tailwind CSS"],
+    github_link: `${github}/Attendance-Management-System-using-Facial-Recognition`,
+    demo: "",
   },
 ];
 
@@ -132,20 +154,20 @@ export const CONTACT = {
 
 export const CERTIFICATIONS = [
   {
+    title: "Computer Vision Intern Certificate",
+    company: "micro1",
+    year: "Jan. 2025",
+    description:
+      "Successfully passed micro1's rigorous AI interview and officially certified as a Computer Vision Intern. This certification highlights expertise in the field of computer vision, with a focus on developing intelligent systems that leverage advanced AI and machine learning techniques. As a Computer Vision Intern, the role involves creating and optimizing algorithms for tasks like object detection, image classification, and video analytics. The certification signifies strong problem-solving skills and the ability to work with cutting-edge frameworks such as TensorFlow and PyTorch.",
+    pdf_certificate: certificate2,
+  },
+  {
     title:
       "Sixth International Conference on Advance Informatics for Computing Research",
     company: "ICAICR-2023",
-    year: "Dec 2023",
+    year: "Dec. 2023",
     description:
       "Participated in the Sixth International Conference on Advanced Informatics for Computing Research (ICAICR 2023), where I presented a research paper on the capabilities of smart wearable devices. My research focused on the development and implementation of advanced features such as obstacle and pothole detection, traffic signal recognition to assist elderly people in crossing roads, geofencing, and medical reminders. This work highlights the potential of smart wearables to enhance safety, mobility, and health management, showcasing their multifaceted applications in everyday life.",
     pdf_certificate: certificate1,
-  },
-  {
-    title: "Computer Vision Intern Certificate",
-    company: "micro1",
-    year: "Jan 2025",
-    description:
-      "Successfully passed micro1's rigorous AI Interview and officially certified as a Computer Vision Intern. This certification highlights expertise in the field of computer vision, with a focus on developing intelligent systems that leverage advanced AI and machine learning techniques. As a Computer Vision Intern, the role involves creating and optimizing algorithms for tasks like object detection, image classification, and video analytics. The certification signifies strong problem-solving skills, the ability to work with cutting-edge frameworks such as TensorFlow and PyTorch.",
-    pdf_certificate: certificate2,
   },
 ];

@@ -7,11 +7,12 @@ import {
   FaChevronLeft,
   FaChevronRight,
 } from "react-icons/fa";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const carouselRef = useRef(null);
   const swipeThreshold = 50;
   let touchStartX = 0;
   let touchEndX = 0;
@@ -74,6 +75,11 @@ const Projects = () => {
       );
     }
   };
+  const handleOverlayClick = (e) => {
+    if (carouselRef.current && !carouselRef.current.contains(e.target)) {
+      closeCarousel(); // 🔸 Close if clicked outside
+    }
+  };
   return (
     <div className="border-b border-white-900 dark:border-neutral-900 pb-4 lg:mb-35">
       <motion.h1
@@ -88,7 +94,7 @@ const Projects = () => {
         {PROJECTS.map((project, index) => (
           <div
             key={index}
-            className="mb-8 flex gap-3 flex-wrap lg:justify-center"
+            className="mb-8 flex gap-3 justify-center items-center flex-wrap lg:justify-center"
           >
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -111,9 +117,14 @@ const Projects = () => {
               transition={{ duration: 0.5 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold text-black dark:text-white">
-                {project.title}
-              </h6>
+              <div className="flex justify-between">
+                <h6 className="mb-2 font-semibold text-black dark:text-white">
+                  {project.title}
+                </h6>
+                <h6 className="mb-2 font-semibold text-neutral-600 dark:text-neutral-400">
+                  {project.timeline}
+                </h6>
+              </div>
               <p className="mb-4 text-neutral-600 dark:text-neutral-400">
                 {project.description}
               </p>
@@ -165,8 +176,12 @@ const Projects = () => {
               exit={{ opacity: 0 }}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
+              onClick={handleOverlayClick}
             >
-              <div className="relative w-full max-w-5xl px-4  group">
+              <div
+                className="relative w-full max-w-5xl px-4  group"
+                ref={carouselRef}
+              >
                 {/* Close Button */}
                 <button
                   onClick={closeCarousel}
