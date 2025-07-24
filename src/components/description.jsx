@@ -1,6 +1,6 @@
 import { DESCRIPTION } from "../constants";
 import { motion } from "framer-motion";
-import profilePic from "../assets/profile-pic.png";
+const profilePic = "https://files.devaviraj.me/profile-pic.png";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },

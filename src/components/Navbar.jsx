@@ -11,7 +11,7 @@ const navigation = [
   {
     name: "Download CV",
     icon: <FaDownload />,
-    path: "https://res.cloudinary.com/dzmw8vldf/raw/upload/Portfolio/Resume_Avi_Raj.pdf",
+    path: "https://files.devaviraj.me/Resume_Avi_Raj.pdf",
     download: true,
   },
   {

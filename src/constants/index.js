@@ -1,15 +1,18 @@
-import project1 from "../assets/projects/project-1.png";
-import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-3.png";
-import project4 from "../assets/projects/project-4.png";
-import project5 from "../assets/projects/project-5.png";
-import project6_1 from "../assets/projects/project-6_1.png";
-import project6_2 from "../assets/projects/project-6_2.png";
-import project6_3 from "../assets/projects/project-6_3.png";
-import project6_4 from "../assets/projects/project-6_4.png";
-import project6_5 from "../assets/projects/project-6_5.png";
-import certificate1 from "../assets/certificate/Certificate-ICAICR-2023.pdf";
-import certificate2 from "../assets/certificate/certificate_micro1.pdf";
+// const project1 from "https://files.devaviraj.me/projects/project-1.png";
+const project1 = "https://files.devaviraj.me/projects/project-1.png";
+const project2 = "https://files.devaviraj.me/projects/project-2.png";
+const project3 = "https://files.devaviraj.me/projects/project-3.png";
+const project4 = "https://files.devaviraj.me/projects/project-4.png";
+const project5 = "https://files.devaviraj.me/projects/project-5.png";
+const project6_1 = "https://files.devaviraj.me/projects/project-6_1.png";
+const project6_2 = "https://files.devaviraj.me/projects/project-6_2.png";
+const project6_3 = "https://files.devaviraj.me/projects/project-6_3.png";
+const project6_4 = "https://files.devaviraj.me/projects/project-6_4.png";
+const project6_5 = "https://files.devaviraj.me/projects/project-6_5.png";
+const certificate1 =
+  "https://files.devaviraj.me/certificate/Certificate-ICAICR-2023.pdf";
+const certificate2 =
+  "https://files.devaviraj.me/certificate/certificate_micro1.pdf";
 
 export const DESCRIPTION = `I am a passionate robotics software developer with a knack for crafting robust and scalable computer vision modules. With one year of hands-on experience, I have honed my skills in computer vision technologies like OpenCV and YOLOv7, as well as web development technologies including Django, React, Axios, MySQL, PostgreSQL, and MongoDB. I have successfully developed and deployed projects that utilize facial recognition, object detection, and real-time data processing. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences, while continually expanding my knowledge in advanced robotics and automation systems.`;
 

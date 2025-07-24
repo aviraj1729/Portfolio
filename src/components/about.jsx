@@ -1,4 +1,4 @@
-import aboutImage from "../assets/about.png";
+const aboutImage = "https://files.devaviraj.me/about.png";
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
 
