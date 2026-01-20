@@ -63,7 +63,7 @@ const techIcon = (Icon, duration, color, label, tooltipPosition = "top") => {
       }}
       initial="initial"
       animate="animate"
-      className="group relative z-10 overflow-visible rounded-2xl border-4 border-neutral-800 p-4 text-black dark:text-white"
+      className="group relative z-10 overflow-visible rounded-2xl border-4 border-neutral-800 dark:border-neutral-700 p-4 text-black dark:text-white"
     >
       <Icon className={`text-7xl ${color}`} />
 
@@ -97,57 +97,255 @@ const Technologies = () => {
         className="flex flex-wrap items-center justify-center gap-x-4 gap-y-8"
       >
         {/* Languages */}
-        {techIcon(AiOutlinePython, 2, "text-green-500", "Python", "top")}
-        {techIcon(FaJava, 3, "text-red-500", "Java", "top")}
-        {techIcon(TbBrandCpp, 2.5, "text-blue-700", "C++", "top")}
-        {techIcon(SiJavascript, 3, "text-yellow-400", "JavaScript", "top")}
-        {techIcon(SiTypescript, 3.5, "text-blue-500", "TypeScript", "top")}
+        {techIcon(
+          AiOutlinePython,
+          2,
+          "text-green-600 dark:text-green-500",
+          "Python",
+          "top",
+        )}
+        {techIcon(FaJava, 3, "text-red-600 dark:text-red-500", "Java", "top")}
+        {techIcon(
+          TbBrandCpp,
+          2.5,
+          "text-blue-700 dark:text-blue-600",
+          "C++",
+          "top",
+        )}
+        {techIcon(
+          SiJavascript,
+          3,
+          "text-yellow-500 dark:text-yellow-400",
+          "JavaScript",
+          "top",
+        )}
+        {techIcon(
+          SiTypescript,
+          3.5,
+          "text-blue-600 dark:text-blue-500",
+          "TypeScript",
+          "top",
+        )}
 
         {/* Backend */}
-        {techIcon(TbBrandNodejs, 2, "text-green-500", "Node.js", "top")}
-        {techIcon(SiExpress, 2.5, "text-gray-400", "Express.js", "top")}
-        {techIcon(SiPostgresql, 4, "text-blue-500", "PostgreSQL", "top")}
-        {techIcon(DiRedis, 4, "text-red-500", "Redis", "top")}
-        {techIcon(TbBrandSocketIo, 4, "text-white", "Socket.IO", "top")}
-        {techIcon(TbBrandSupabase, 3, "text-green-500", "Supabase", "top")}
+        {techIcon(
+          TbBrandNodejs,
+          2,
+          "text-green-600 dark:text-green-500",
+          "Node.js",
+          "top",
+        )}
+        {techIcon(
+          SiExpress,
+          2.5,
+          "text-neutral-700 dark:text-gray-400",
+          "Express.js",
+          "top",
+        )}
+        {techIcon(
+          SiPostgresql,
+          4,
+          "text-blue-600 dark:text-blue-500",
+          "PostgreSQL",
+          "top",
+        )}
+        {techIcon(DiRedis, 4, "text-red-600 dark:text-red-500", "Redis", "top")}
+        {techIcon(
+          TbBrandSocketIo,
+          4,
+          "text-neutral-800 dark:text-white",
+          "Socket.IO",
+          "top",
+        )}
+        {techIcon(
+          TbBrandSupabase,
+          3,
+          "text-green-600 dark:text-green-500",
+          "Supabase",
+          "top",
+        )}
 
         {/* Frontend + Mobile */}
-        {techIcon(RiReactjsLine, 5, "text-cyan-400", "React.js", "bottom")}
-        {techIcon(SiReact, 4.5, "text-cyan-300", "React Native", "bottom")}
-        {techIcon(SiExpo, 4, "text-white", "Expo", "bottom")}
-        {techIcon(SiTailwindcss, 5, "text-sky-500", "TailwindCSS", "bottom")}
+        {techIcon(
+          RiReactjsLine,
+          5,
+          "text-cyan-600 dark:text-cyan-400",
+          "React.js",
+          "bottom",
+        )}
+        {techIcon(
+          SiReact,
+          4.5,
+          "text-cyan-500 dark:text-cyan-300",
+          "React Native",
+          "bottom",
+        )}
+        {techIcon(
+          SiExpo,
+          4,
+          "text-neutral-800 dark:text-white",
+          "Expo",
+          "bottom",
+        )}
+        {techIcon(
+          SiTailwindcss,
+          5,
+          "text-sky-600 dark:text-sky-500",
+          "TailwindCSS",
+          "bottom",
+        )}
 
         {/* Tools + DevOps */}
-        {techIcon(FaGithub, 4, "text-gray-200", "GitHub", "bottom")}
-        {techIcon(SiDocker, 3.5, "text-blue-400", "Docker", "bottom")}
-        {techIcon(SiNginx, 3.5, "text-green-500", "Nginx", "bottom")}
-        {techIcon(FaAws, 4, "text-orange-400", "AWS", "bottom")}
-        {techIcon(SiGooglecloud, 4, "text-blue-400", "GCP", "bottom")}
-        {techIcon(SiKubernetes, 4.5, "text-blue-500", "Kubernetes", "bottom")}
-        {techIcon(SiPostman, 3.5, "text-orange-500", "Postman", "bottom")}
-        {techIcon(SiGradle, 3.5, "text-green-400", "Gradle", "bottom")}
-        {techIcon(SiVim, 3, "text-emerald-500", "Vim", "bottom")}
+        {techIcon(
+          FaGithub,
+          4,
+          "text-neutral-800 dark:text-gray-200",
+          "GitHub",
+          "bottom",
+        )}
+        {techIcon(
+          SiDocker,
+          3.5,
+          "text-blue-600 dark:text-blue-400",
+          "Docker",
+          "bottom",
+        )}
+        {techIcon(
+          SiNginx,
+          3.5,
+          "text-green-600 dark:text-green-500",
+          "Nginx",
+          "bottom",
+        )}
+        {techIcon(
+          FaAws,
+          4,
+          "text-orange-600 dark:text-orange-400",
+          "AWS",
+          "bottom",
+        )}
+        {techIcon(
+          SiGooglecloud,
+          4,
+          "text-blue-600 dark:text-blue-400",
+          "GCP",
+          "bottom",
+        )}
+        {techIcon(
+          SiKubernetes,
+          4.5,
+          "text-blue-600 dark:text-blue-500",
+          "Kubernetes",
+          "bottom",
+        )}
+        {techIcon(
+          SiPostman,
+          3.5,
+          "text-orange-600 dark:text-orange-500",
+          "Postman",
+          "bottom",
+        )}
+        {techIcon(
+          SiGradle,
+          3.5,
+          "text-green-600 dark:text-green-400",
+          "Gradle",
+          "bottom",
+        )}
+        {techIcon(
+          SiVim,
+          3,
+          "text-emerald-600 dark:text-emerald-500",
+          "Vim",
+          "bottom",
+        )}
 
         {/* Extra */}
-        {techIcon(TbBrandDjango, 3.5, "text-green-600", "Django", "bottom")}
-        {techIcon(SiFastapi, 3.5, "text-teal-500", "FastAPI", "bottom")}
-        {techIcon(SiOpencv, 3.5, "text-red-600", "OpenCV", "bottom")}
-        {techIcon(GrMysql, 3.5, "text-sky-400", "MySQL", "bottom")}
-        {techIcon(SiMongodb, 6, "text-green-500", "MongoDB", "bottom")}
+        {techIcon(
+          TbBrandDjango,
+          3.5,
+          "text-green-700 dark:text-green-600",
+          "Django",
+          "bottom",
+        )}
+        {techIcon(
+          SiFastapi,
+          3.5,
+          "text-teal-600 dark:text-teal-500",
+          "FastAPI",
+          "bottom",
+        )}
+        {techIcon(
+          SiOpencv,
+          3.5,
+          "text-red-700 dark:text-red-600",
+          "OpenCV",
+          "bottom",
+        )}
+        {techIcon(
+          GrMysql,
+          3.5,
+          "text-sky-600 dark:text-sky-400",
+          "MySQL",
+          "bottom",
+        )}
+        {techIcon(
+          SiMongodb,
+          6,
+          "text-green-600 dark:text-green-500",
+          "MongoDB",
+          "bottom",
+        )}
 
-        {techIcon(FaAndroid, 3, "text-green-500", "Android", "bottom")}
-        {techIcon(FaApple, 3, "text-gray-300", "iOS", "bottom")}
+        {techIcon(
+          FaAndroid,
+          3,
+          "text-green-600 dark:text-green-500",
+          "Android",
+          "bottom",
+        )}
+        {techIcon(
+          FaApple,
+          3,
+          "text-neutral-700 dark:text-gray-300",
+          "iOS",
+          "bottom",
+        )}
         {techIcon(
           SiAndroidstudio,
           3,
-          "text-green-500",
+          "text-green-600 dark:text-green-500",
           "Android Studio",
           "bottom",
         )}
-        {techIcon(SiXcode, 3, "text-blue-400", "Xcode", "bottom")}
-        {techIcon(FaLinux, 3, "text-yellow-400", "Linux", "bottom")}
-        {techIcon(FaBootstrap, 3, "text-purple-500", "Bootstrap", "bottom")}
-        {techIcon(SiFlask, 3, "text-gray-300", "Flask", "bottom")}
+        {techIcon(
+          SiXcode,
+          3,
+          "text-blue-600 dark:text-blue-400",
+          "Xcode",
+          "bottom",
+        )}
+        {techIcon(
+          FaLinux,
+          3,
+          "text-yellow-600 dark:text-yellow-400",
+          "Linux",
+          "bottom",
+        )}
+        {techIcon(
+          FaBootstrap,
+          3,
+          "text-purple-600 dark:text-purple-500",
+          "Bootstrap",
+          "bottom",
+        )}
+        {techIcon(
+          SiFlask,
+          3,
+          "text-neutral-700 dark:text-gray-300",
+          "Flask",
+          "bottom",
+        )}
       </motion.div>
     </div>
   );
