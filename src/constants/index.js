@@ -42,6 +42,43 @@ export const EDUCATION = [
 
 export const EXPERIENCES = [
   {
+    year: "Oct 2025 - Present",
+    role: "Freelance Software Engineer (Backend + Mobile)",
+    company: "JantaWave",
+    description: `Built e-Janta, a real-time social platform by developing backend services in Node.js/Express and a cross-platform mobile app using React Native (Expo) for Android and iOS. Designed secure REST APIs with PostgreSQL schema design and authentication using JWT, enabling smooth mobile-first workflows. Implemented real-time features such as feeds and notifications using Socket.IO with Redis caching for faster responses. Containerized services using Docker and supported deployments with Nginx and cloud infrastructure.`,
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL (Neon)",
+      "React Native",
+      "Expo",
+      "Socket.IO",
+      "Redis",
+      "Docker",
+      "Nginx",
+      "GCP",
+      "JWT",
+      "Git",
+    ],
+  },
+  {
+    year: "Mar 2025 - Present",
+    role: "Full Stack Developer",
+    company: "K2EdTech Industries Pvt. Ltd.",
+    description: `Developed a full-stack web application enabling 200+ students to attend structured lectures followed by quizzes, ensuring mastery before progressing to the next topic. Integrated an AI-powered multi-LLM chat feature allowing students to clarify 700+ doubts in real time, improving engagement by 40% during testing. Implemented personalized learning roadmaps, boosting student course completion rate by 30%.`,
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "PostgreSQL",
+      "Agora",
+      "AWS",
+      "Axios",
+      "LLMs",
+    ],
+  },
+
+  {
     year: "Aug 2023 - Sept 2024",
     role: "Computer Vision Intern",
     company: "UDIP Technologies PVT. LTD.",
@@ -71,7 +108,7 @@ export const PROJECTS = [
       "CLoudflare R2 Bucket",
     ],
     github_link: `${github}/chatty`,
-    demo: "",
+    demo: "https://queetalk.hawkjack.xyz/",
   },
   {
     title: "QRVars",
