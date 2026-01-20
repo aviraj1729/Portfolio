@@ -49,7 +49,7 @@ export default function Certifications() {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="w-full lg:w-1/4 px-5 flex justify-start ml-2"
+              className="w-full lg:w-1/4 px-5 mb-1 flex justify-start ml-2"
             >
               <ViewPdf
                 pdfFile={certificate.pdf_certificate}
@@ -63,7 +63,7 @@ export default function Certifications() {
               className="w-full max-w-xl lg:w-3/4"
             >
               <div className="flex justify-between">
-                <h6 className="mb-2 font-semibold text-black dark:text-white">
+                <h6 className="my-2 font-semibold text-black dark:text-white">
                   {certificate.title} - {certificate.company}
                 </h6>
                 <p className="m-2 text-sm text-neutral-500 whitespace-nowrap">
